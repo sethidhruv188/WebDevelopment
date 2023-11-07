@@ -5,43 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-            document.addEventListener('DOMContentLoaded',function(){
-                let correct = document.querySelector('.correct');
-                correct.addEventListener('click',function(){
-                    correct.style.backgroundColor = "green";
-                    document.querySelector('#answer1').innerHTML="Correct!";
 
-                });
-
-                let incorrect = document.querySelectorAll('.incorrect');
-                for(let i=0; i<incorrect.length;i++)
-                {
-                    incorrect[i].addEventListener("click",function(){
-                    incorrect[i].style.backgroundColor="red";
-                    document.querySelector("#answer1").innerHTML="Incorrect!";
-                    });
-                }
-
-                //frq
-                document.querySelector("#check").addEventListener("click",function(){
-                    let input = document.qurySelector("input");
-                    if(input.value.toLowerCase()=="switzerland")
-                    {
-                        input.style.backgroundColor = "green";
-                        document.querySelector("#answer2").innerHTML = "Correct!";
-
-                    }
-                    else
-                    {
-                        input.style.backgroundColor = "red";
-                        document.querySelector("#answer2").innerHTML="incorrect!";
-                    }
-
-                });
-            });
-        </script>
     </head>
     <body>
         <div class="header">
@@ -72,6 +36,43 @@
                     <button id ="check">Check answer</button>
                     <p id=""answer2"></p>
                 </form>
+                <script>
+                    // TODO: Add code to check answers to questions
+                    document.addEventListener('DOMContentLoaded',function(){
+                        let correct = document.querySelector('.correct');
+                        correct.addEventListener('click',function(){
+                            correct.style.backgroundColor = "green";
+                            document.querySelector('#answer1').innerHTML="Correct!";
+
+                        });
+
+                        let incorrect = document.querySelectorAll('.incorrect');
+                        for(let i=0; i<incorrect.length;i++)
+                        {
+                            incorrect[i].addEventListener("click",function(){
+                            incorrect[i].style.backgroundColor="red";
+                            document.querySelector("#answer1").innerHTML="Incorrect!";
+                            });
+                        }
+
+                        //frq
+                        document.querySelector("#check").addEventListener("click",function(){
+                            let input = document.qurySelector("input");
+                            if(input.value.toLowerCase()=="switzerland")
+                            {
+                                input.style.backgroundColor = "green";
+                                document.querySelector("#answer2").innerHTML = "Correct!";
+
+                            }
+                            else
+                            {
+                                input.style.backgroundColor = "red";
+                                document.querySelector("#answer2").innerHTML="incorrect!";
+                            }
+
+                        });
+                    });
+                </script>
             </div>
         </div>
     </body>
